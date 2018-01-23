@@ -13,7 +13,9 @@ Thumbs.db
 .gradle/
 build/
 target/
-bin/
+FontExtract/bin/
+genFileList/bin/
+Sfntly/sfntly/java/build/
 dependency-reduced-pom.xml
 
 # Eclipse Project Files

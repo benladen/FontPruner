@@ -52,6 +52,7 @@ def bulidNewFont(originPath,outPutPath):
 
 
 if __name__ == '__main__':
+  print("current cwd:" + os.getcwd())
   arguments = docopt(__doc__, version='0.1.1rc')
   print(arguments)
         #raise Exception("path not exists")
@@ -69,7 +70,7 @@ if __name__ == '__main__':
     tmp = TempPathDefault
   else :
       if not os.path.exists(tmp):
-        raise Exception("tempPath - bad path: " + tmp) 
+        os.makedirs(tmp)
 
   genFilePathList(arguments['--inputPath'], tmp) 
 

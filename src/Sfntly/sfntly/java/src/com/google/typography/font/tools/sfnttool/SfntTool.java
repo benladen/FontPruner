@@ -107,7 +107,7 @@ public class SfntTool {
     {
       File f = new File(filePath);  
       if(!f.exists() ||!f.isFile()){
-        System.out.println("ÎÄ±¾²»´æÔÚ»òÕßÎŞĞ§"+f.toString());
+        System.out.println("æ–‡æœ¬ä¸å­˜åœ¨æˆ–è€…æ— æ•ˆ"+f.toString());
         continue;
       }
       strBuf.append(ExtractionOperationUtil.ExtractStringFromFile(f));
@@ -124,7 +124,7 @@ public class SfntTool {
     } else {
       printUsage();
     }
-//    tool.subsetString =" ÎÒÒª";
+//    tool.subsetString =" æˆ‘è¦";
 //    tool.subsetFontFile(new File("C:\\Users\\zhangzhengtong\\Desktop\\testTTF\\PublicFonts.ttf")
 //    ,new File("C:\\Users\\zhangzhengtong\\Desktop\\testExtractFix\\testOut.ttf"),1);
     

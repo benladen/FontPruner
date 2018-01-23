@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
 public class ExtractionOperationUtil {
 
 	/***
-	 * ÊÇ·ñÊÇºº×Ö
+	 * æ˜¯å¦æ˜¯æ±‰å­—
 	 */
 	public static boolean isChineseCharacters(String str){
         boolean temp = false;
@@ -33,7 +33,7 @@ public class ExtractionOperationUtil {
 	}
 	
 	/**
-	 * É¸Ñ¡ÓĞĞ§×Ö·û
+	 * ç­›é€‰æœ‰æ•ˆå­—ç¬¦
 	 */
 	public static String ExtractVaildString(String str) {
 		return str.replaceAll( "\\s*|\t|\r|\n","");

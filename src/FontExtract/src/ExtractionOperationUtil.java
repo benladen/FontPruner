@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
 public class ExtractionOperationUtil {
 
 	/***
-	 * ÊÇ·ñÊÇºº×Ö
+	 * æ˜¯å¦æ˜¯æ±‰å­—
 	 */
 	public static boolean isChineseCharacters(String str){
         boolean temp = false;
@@ -32,7 +32,7 @@ public class ExtractionOperationUtil {
 	}
 	
 	/**
-	 * É¸Ñ¡ÓÐÐ§×Ö·û
+	 * ç­›é€‰æœ‰æ•ˆå­—ç¬¦
 	 */
 	public static String ExtractVaildString(String str) {
 		return str.replaceAll( "\\s*|\t|\r|\n","");
@@ -122,13 +122,15 @@ public class ExtractionOperationUtil {
 		
 		if(strBuf.length()>0)
 			strBuf.delete(0,strBuf.length());
+		strBuf.append(' ');
 		for(char c :unchineseCharMap.keySet()){
 			strBuf.append(c);
 		}
+
 		result.setUnChineseCharString(strBuf.toString());
 		//System.out.println(resultStr);
 //		for(int n :chineseCharMap.values()){
-//			System.out.println("×ÖÊý"+n);
+//			System.out.println("å­—æ•°"+n);
 //		}
 		return result;
 	}

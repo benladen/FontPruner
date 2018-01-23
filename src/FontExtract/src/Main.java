@@ -6,18 +6,18 @@ public class Main {
 	public static void main(String[] args) {
 		int argLength = args.length;
 		if(argLength!=2){
-			System.out.println("ÊäÈë²ÎÊıÓĞÎó£¬[0]ĞèÒª³éÈ¡µÄÎÄ±¾Â·¾¶ÁĞ±í   [1]Êä³öÂ·¾¶");
+			System.out.println("è¾“å…¥å‚æ•°æœ‰è¯¯ï¼Œ[0]éœ€è¦æŠ½å–çš„æ–‡æœ¬è·¯å¾„åˆ—è¡¨   [1]è¾“å‡ºè·¯å¾„");
 			System.exit(0);
 		}
 
 		String fileListString =args[0];
 		File file = new File(fileListString);
 		if(!file.exists()){
-			System.out.println("ÎÄ±¾Â·¾¶ÁĞ±í²»´æÔÚ"+file.toString());
+			System.out.println("æ–‡æœ¬è·¯å¾„åˆ—è¡¨ä¸å­˜åœ¨"+file.toString());
 			System.exit(1);
 		}
 		if(!file.isFile()){
-			System.out.println("ÎÄ±¾Â·¾¶ÁĞ±í²»ÊÇÎÄ¼ş"+file.toString());
+			System.out.println("æ–‡æœ¬è·¯å¾„åˆ—è¡¨ä¸æ˜¯æ–‡ä»¶"+file.toString());
 			System.exit(1);
 		}
 		
@@ -28,7 +28,7 @@ public class Main {
 		{
 			File f = new File(filePath);	
 			if(!f.exists() ||!f.isFile()){
-				System.out.println("ÎÄ±¾²»´æÔÚ»òÕßÎŞĞ§"+f.toString());
+				System.out.println("æ–‡æœ¬ä¸å­˜åœ¨æˆ–è€…æ— æ•ˆ"+f.toString());
 				continue;
 			}
 			strBuf.append(ExtractionOperationUtil.ExtractStringFromFile(f));
@@ -40,14 +40,14 @@ public class Main {
 			outputFile.mkdirs();
 		}
 		if(outputFile.isFile()){
-			System.out.println("Â·¾¶ÊÇÎÄ¼ş"+outputFile.toString());
+			System.out.println("è·¯å¾„æ˜¯æ–‡ä»¶"+outputFile.toString());
 			System.exit(1);
 		}
 		ExtractResult result =ExtractionOperationUtil.ExtractUnrepeatedWordsFromString(strBuf.toString());
 		ExtractionOperationUtil.WriteStr2File(result.chineseCharString,new File(outputPath+"\\ChineseOutPut.txt"),"UTF-8");
 		ExtractionOperationUtil.WriteStr2File(result.unChineseCharString,new File(outputPath+"\\unChineseOutPut.txt"),"UTF-8");
 		
-		System.out.println("ÌáÈ¡Íê³É");
+		System.out.println("æå–å®Œæˆ");
 	}
 }
 

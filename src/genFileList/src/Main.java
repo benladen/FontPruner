@@ -12,7 +12,7 @@ public class Main {
 	public static String result="" ;
 	public static String outputPath ;
 	public static void main(String[] args) {
-		//×îºóÒ»¸öÂ·¾¶ÎªfileListÊä³öÂ·¾¶£¬Ç°ÃæµÄÎªĞèÒªÌáÈ¡ÎÄ¼şÁĞ±íµÄÊäÈëÂ·¾¶
+		//æœ€åä¸€ä¸ªè·¯å¾„ä¸ºfileListè¾“å‡ºè·¯å¾„ï¼Œå‰é¢çš„ä¸ºéœ€è¦æå–æ–‡ä»¶åˆ—è¡¨çš„è¾“å…¥è·¯å¾„
 		if(args.length<2)
 		{
 			System.out.println("para error");
@@ -24,7 +24,7 @@ public class Main {
 			String path = args[i];
 			File file = new File(path);
 			if(!file.exists()){
-				System.out.println("ÎÄ±¾Â·¾¶ÁĞ±í²»´æÔÚ"+file.toString());
+				System.out.println("æ–‡æœ¬è·¯å¾„åˆ—è¡¨ä¸å­˜åœ¨"+file.toString());
 				continue;
 			}
 			WriteStr2File(listFile(file),new File(outputPath),"UTF-8");
