@@ -17,7 +17,8 @@ src/FontExtract/bin/
 src/FontExtract/build/
 src/genFileList/build/
 src/genFileList/bin/
-src/Sfntly/sfntly/java/build/
+src/out/
+src/Sfntly/target/
 dependency-reduced-pom.xml
 
 # Eclipse Project Files
